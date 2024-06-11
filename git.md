@@ -135,12 +135,12 @@ examples/*
 - if --all is specified, all branches will be pushed and branch parameter is not needed
 - if --delete is specified, branch will be deleted at remote location
 
-### git fetch ({--all}) origin [branch]
-- fetches the given branch from the remote repository origin
-- fetches everything if --all is specified
-- does not merge with local code
+### git fetch origin [branch]
+- fetches the given branch from the remote repository origin to origin/branch
+- fetches everything if branch is not specified
+- does not merge with local code (need to git merge origin/branch)
 
-### git pull ({--all}) origin [branch]
+### git pull origin [branch]
 - fetches the given branch from the remote repository origin
-- fetches everything if --all is specified
+- fetches everything if branch is not specified
 - merges local code and fetched code after
