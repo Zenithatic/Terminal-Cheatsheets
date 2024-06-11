@@ -124,3 +124,23 @@ examples/*
 ### git merge -m [message] [branch]
 - merges the given branch into the current branch 
 - if a merge conflict arises, it has to be resolved by editing the file in which the conflict occurs
+
+## Remote repository commands (GitHub)
+
+### git remote add origin [link]
+- establishes a remote connection to the link, calls this connection 'origin'
+
+### git push ({--all}) ({--delete}) -u origin [branch]
+- pushes the branch provided to the remote location
+- if --all is specified, all branches will be pushed and branch parameter is not needed
+- if --delete is specified, branch will be deleted at remote location
+
+### git fetch ({--all}) origin [branch]
+- fetches the given branch from the remote repository origin
+- fetches everything if --all is specified
+- does not merge with local code
+
+### git pull ({--all}) origin [branch]
+- fetches the given branch from the remote repository origin
+- fetches everything if --all is specified
+- merges local code and fetched code after
